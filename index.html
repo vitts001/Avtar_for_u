@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<title>Avtar</title>
+
+<body>
+    <div
+        style="height: 400px;width: 500px;position: absolute;border: 1px solid black;left: 400px;top: 100px;border-radius: 8px;box-shadow: 0 0 10px 1px;">
+        <h1 style="padding: 10px;margin-left: 25px;">Lets make <span
+                style="color: crimson;font-weight: 1000;font-size: 40px;">Avtar</span> for your name
+        </h1>
+        <input type="text" id="name" placeholder="Enter your name"
+            style="position: absolute;top: 90px;left: 150px;padding: 6px;"><br>
+        <img src="img.png" id="img"
+            style="height: 200px;width: 200px;padding: 10px;position: absolute;left: 120px;"><br>
+        <button id="btn" style="position: absolute;top: 350px;left: 140px;padding: 8px;width: 200px;">Show
+            my avtar</button>
+    </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $('#btn').click(function () {
+            let name = document.getElementById('name').value;
+            //let img = document.getElementById(img);
+            //alert(name);
+            $('#img').attr('src', `https://joeschmoe.io/api/v1/${name}`);
+        });
+
+    });
+</script>
+
+
+</html>
